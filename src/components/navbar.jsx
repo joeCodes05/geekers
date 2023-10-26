@@ -9,11 +9,9 @@ import Button from './button'
 
 const navLinks = [
     {linkName: "Home", path: "/", isActive: false},
-    {linkName: "About", path: "/about", isActive: false},
     {linkName: "Courses", path: "/courses", isActive: false},
     {linkName: "Articles", path: "/articles", isActive: false},
     {linkName: "Community", path: "/community", isActive: false},
-    {linkName: "Reviews", path: "/reviews", isActive: false},
     {linkName: "FAQs", path: "/faq", isActive: false}
 ]
 
