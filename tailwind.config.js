@@ -5,10 +5,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: "#11111f",
-        accent: '#68d2df'
-      }
     },
     fontFamily: {
       rubik: ['Rubik', 'sans-serif'],
