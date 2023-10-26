@@ -4,11 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    colors: {
-      primary: "#1a330e",
-      accent: '#63b437'
-    },
     extend: {
+      colors: {
+        primary: "#11111f",
+        accent: '#68d2df'
+      }
     },
     fontFamily: {
       rubik: ['Rubik', 'sans-serif'],
