@@ -10,7 +10,9 @@ import Button from './button'
 const navLinks = [
     {linkName: "Home", path: "/", isActive: false},
     {linkName: "About", path: "/about", isActive: false},
-    {linkName: "Marketplace", path: "/marketplace", isActive: false},
+    {linkName: "Courses", path: "/courses", isActive: false},
+    {linkName: "Articles", path: "/articles", isActive: false},
+    {linkName: "Community", path: "/community", isActive: false},
     {linkName: "Reviews", path: "/reviews", isActive: false},
     {linkName: "FAQs", path: "/faq", isActive: false}
 ]
@@ -34,7 +36,7 @@ export default function Navbar() {
             <Bars3BottomRightIcon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        <Popover.Group className="hidden lg:flex lg:gap-x-8">
             {navLinks.map((data, index) => {
                 const { linkName, path, isActive } = data;
                 return (
