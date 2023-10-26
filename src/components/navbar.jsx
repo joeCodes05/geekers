@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Dialog, Popover } from '@headlessui/react'
 import {
   Bars3BottomRightIcon,
@@ -16,13 +16,30 @@ const navLinks = [
 ]
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
+  // change navbar state on scroll
+  const [ navbar, setNavbar ] = useState(false);
+
+  const changeNavbarState = () => {
+    if (window.scrollY >= 60) {
+      setNavbar(true);
+    }  else {
+      setNavbar(false);
+    }
+  }
+
+  useEffect(() => {
+    changeNavbarState();
+
+    window.addEventListener('scroll', changeNavbarState);
+  }, []);
 
   return (
-    <header className="bg-white fixed w-full top-0 left-0 right-0">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <header className={navbar ? "bg-white fixed w-full top-0 left-0 right-0 shadow-md duration-700" : "bg-white fixed w-full top-0 left-0 right-0 duration-700"}>
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 md:px-0 md:py-3" aria-label="Global">
         <div className="flex lg:flex-1">
-            <Link to={'/'} className='text-3xl font-rubik font-bold text-emerald-700'>Geekers</Link>
+          <Link to={'/'} className='text-3xl font-rubik font-bold text-emerald-700'>Geekers</Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -45,13 +62,6 @@ export default function Navbar() {
             })}            
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:gap-3 lg:justify-end">
-            <Link to={'/login'} className='no-underline'>
-                <Button
-                    buttonText={'Log in'}
-                    outline={true}
-                />
-            </Link>
-
             <Link to={'/signup'} className='no-underline'>
                 <Button
                     buttonText={'Sign up'}
