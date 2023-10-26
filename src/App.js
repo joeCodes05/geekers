@@ -1,16 +1,24 @@
-import React from 'react'
+import React, { createContext, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Homepage from './pages/homepage'
 import SignUp from './pages/signup'
+import Navbar from './components/navbar';
+import './assets/sass/custome.scss'
+
+export const ContextProvider = createContext();
 
 const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <Router>
-      <Routes>
-        <Route exact element={ <Homepage /> } path='/' />
-        <Route exact element={ <SignUp /> } path='/signup' />
-      </Routes>
-    </Router>
+    <ContextProvider.Provider value={[darkMode, setDarkMode]}>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact element={ <Homepage /> } path='/' />
+          <Route exact element={ <SignUp theme={darkMode} /> } path='/signup' />
+        </Routes>
+      </Router>
+    </ContextProvider.Provider>
   )
 }
 
