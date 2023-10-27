@@ -1,18 +1,15 @@
 import React from 'react'
-import { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { ContextProvider } from '../App'
 import Button from '../components/button'
 import InputFields from '../components/inputFields'
 import * as BsIcons from 'react-icons/bs'
 
 const SignUp = () => {
-  const theme = useContext(ContextProvider);
   return (
     <>
         <div className='h-screen w-screen flex items-center'>
           <div className='w-full'>
-            <h1 className='text-center text-[25px] leading-[25px] md:text-[35px] md:leading-[35px] ld:text-[40px] lg:leading-[40px] text-emerald-700 font-bold font-rubik'>
+            <h1 className='text-center text-[25px] leading-[25px] md:text-[35px] md:leading-[35px] ld:text-[40px] lg:leading-[40px] text-emerald-700 font-rubik'>
               Create Account!
             </h1>
             <div className="text-gray-500 text-sm mx-auto text-center">
