@@ -5,6 +5,7 @@ import SignUp from './pages/signup'
 import Navbar from './components/navbar';
 import './assets/sass/custome.scss'
 import Footer from './components/footer';
+import LogIn from './pages/login';
 
 export const ContextProvider = createContext();
 
@@ -17,6 +18,7 @@ const App = () => {
         <Routes>
           <Route exact element={ <Homepage /> } path='/' />
           <Route exact element={ <SignUp theme={darkMode} /> } path='/signup' />
+          <Route exact element={ <LogIn theme={darkMode} /> } path='/login' />
         </Routes>
         <Footer />
       </Router>
