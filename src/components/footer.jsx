@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import * as BsIcons from 'react-icons/bs'
+import InputFields from './inputFields'
+import Button from './button'
 
 const Footer = () => {
   const socialLinks = [
@@ -9,9 +11,12 @@ const Footer = () => {
     {icon: <BsIcons.BsGithub />, title: "Github", path: "https://github.com/joeCodes05"},
   ]
 
+  const d = new Date();
+  const currentYear = d.getFullYear();
+
   return (
     <>
-        <footer className='py-[7rem] bg-gray-100'>
+        <footer className='py-[5rem] bg-gray-100'>
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-row">
               <div className="basis-1/2">
@@ -53,6 +58,31 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
+              <div className="basis-1/3">
+                <h4 className='text-2xl font-rubik text-emerald-700 font-bold'>Newsletter</h4>
+                <div className="mt-3">
+                  <div className="text-gray-500 text-sm">
+                    Want geeky news and updates? <br />
+                    Sign up for our newsletter.
+                  </div>
+                  <div className="mt-3">
+                    <form action='#' method='post' className="flex gap-3">
+                      <InputFields 
+                        inputType={'email'}
+                        placeholder={'example@email.com'}
+                      />
+                      <Button 
+                        buttonText={'Subscribe'}
+                        outline={false}
+                      />
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr className='my-14' />
+            <div className="text-center text-gray-">
+              &copy; {currentYear}, All rightserved.
             </div>
           </div>
         </footer>
