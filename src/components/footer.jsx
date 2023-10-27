@@ -17,10 +17,10 @@ const Footer = () => {
   return (
     <>
         <footer className='py-[5rem] bg-gray-100'>
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-row">
-              <div className="basis-1/2">
-                <Link to={'/'} className='text-4xl font-rubik font-bold text-emerald-700'>Geekers</Link>
+          <div className="w-[95%] mx-auto">
+            <div className="md:flex md:flex-row md:flex-wrap lg:flex-nowrap">
+              <div className="md:basis-1/1 lg:basis-1/2">
+                <Link to={'/'} className='text-4xl font-rubik text-emerald-700'>Geekers</Link>
 
                 <div className="mt-3 w-full md:w-[60%] text-sm text-gray-500">
                   We are deeply passionate about software engineering.
@@ -41,8 +41,8 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <div className="basis-1/4">
-                <h4 className='text-2xl font-rubik text-emerald-700 font-bold'>Quick Links</h4>
+              <div className="md:basis-1/2 mt-5 md:mt-5 lg:mt-0 lg:basis-1/4">
+                <h4 className='text-2xl font-rubik text-emerald-700'>Quick Links</h4>
                 <div className="mt-3 flex flex-col gap-3">
                   <div>
                     <Link to={'/courses'} className='text-gray-500 no-underline duration-700 hover:text-emerald-700 hover:underline'>Courses</Link>
@@ -58,8 +58,8 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <div className="basis-1/3">
-                <h4 className='text-2xl font-rubik text-emerald-700 font-bold'>Newsletter</h4>
+              <div className="md:basis-1/2 mt-5 md:mt-5 lg:mt-0 lg:basis-1/3">
+                <h4 className='text-2xl font-rubik text-emerald-700'>Newsletter</h4>
                 <div className="mt-3">
                   <div className="text-gray-500 text-sm">
                     Want geeky news and updates? <br />
