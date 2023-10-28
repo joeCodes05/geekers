@@ -1,12 +1,11 @@
 import React from 'react'
-import heroImg from '../assets/images/hero_img.png'
 import { Link } from 'react-router-dom'
-import Button from '../components/button'
+import Button from '../../../components/button'
+import heroImg from '../assets/images/hero_img.png'
 
-const Homepage = () => {
+const Hero = () => {
   return (
     <>
-      <main className='homepage'>
         <section className='hero_section'>
           <div className='h-full py-[7rem] w-screen place-items-center grid text-center'>
             <div>
@@ -36,9 +35,8 @@ const Homepage = () => {
             </div>
           </div>
         </section>
-      </main>
     </>
   )
 }
 
-export default Homepage
+export default Hero

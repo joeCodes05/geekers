@@ -35,7 +35,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={navbar ? "bg-white fixed w-full top-0 left-0 right-0 shadow-md duration-700" : "bg-white fixed w-full top-0 left-0 right-0 duration-700"}>
+    <header className={navbar ? "bg-white fixed w-full top-0 left-0 right-0 shadow-md duration-700 z-10" : "bg-white fixed w-full top-0 left-0 right-0 duration-700 z-10"}>
       <nav className="mx-auto flex w-[95%] items-center justify-between p-3 md:px-0 md:py-3" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link to={'/'} className='text-3xl font-rubik text-emerald-700'>Geekers</Link>
