@@ -1,15 +1,22 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Homepage from './pages/homepage'
+import Homepage from './pages/home/homepage'
 import SignUp from './pages/signup'
 import Navbar from './components/navbar';
 import './assets/sass/custome.scss'
 import Footer from './components/footer';
 import LogIn from './pages/login';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const ContextProvider = createContext();
 
 const App = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   const [darkMode, setDarkMode] = useState(false);
   return (
     <ContextProvider.Provider value={[darkMode, setDarkMode]}>
